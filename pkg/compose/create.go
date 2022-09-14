@@ -396,6 +396,7 @@ func (s *composeService) getCreateOptions(ctx context.Context, p *types.Project,
 		LogConfig:      logConfig,
 		GroupAdd:       service.GroupAdd,
 		Links:          links,
+		OomScoreAdj:    int(service.OomScoreAdj),
 	}
 
 	return &containerConfig, &hostConfig, networkConfig, nil
